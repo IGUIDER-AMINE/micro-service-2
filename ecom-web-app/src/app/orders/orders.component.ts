@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ActivatedRoute, Router} from '@angular/router';
-import {NgForOf, NgIf} from '@angular/common';
+import {DatePipe, NgForOf, NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-orders',
   standalone: true,
   imports: [
     NgIf,
-    NgForOf
+    NgForOf,
+    DatePipe
   ],
   templateUrl: './orders.component.html',
   styleUrl: './orders.component.css'
@@ -33,5 +34,5 @@ export class OrdersComponent {
 
   getBillDetails(o: any) {
     this.router.navigateByUrl("/billDetails/"+o.id);
-  }
+  }//1:00:12
 }
