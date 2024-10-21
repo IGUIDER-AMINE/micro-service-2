@@ -24,4 +24,12 @@ public class Bill {
     @Transient
     //l'attribut est dans la classe ms n'est pas represente dans la base de donnees,cad ignore par jpa
     private Customer customer;
+
+    public double getTotal(){
+        double somme=0;
+        for(ProductItem pi:productItems){
+            somme+=pi.getAmount();
+        }
+        return somme;
+    }
 }
