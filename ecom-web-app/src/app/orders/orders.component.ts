@@ -34,5 +34,5 @@ export class OrdersComponent {
 
   getBillDetails(o: any) {
     this.router.navigateByUrl("/billDetails/"+o.id);
-  }//1:00:12
+  }
 }
